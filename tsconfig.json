@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "ES2020"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "outDir": "./dist",
+    "rootDir": ".",
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "checkJs": true,
+    "diagnostics": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@modules/*": [
+        "modules/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ],
+      "@config/*": [
+        "config/*", "vendor/config/*"
+      ],
+      "@helpers/*": [
+        "vendor/helpers/*",
+        "modules/shared/helpers/*"
+      ],
+      "@libs/*": [
+        "vendor/libs/*"
+      ],
+      "@configs/*": [
+        "vendor/config/index.ts"
+      ],
+      "@providers/*": [
+        "vendor/providers/*"
+      ],
+      "@decorators/*": [
+        "vendor/decorators/*"
+      ]
+    },
+    "types": [
+      "vitest/globals"
+    ]
+  },
+  "exclude": [
+    "assets",
+    "jest.*",
+    "prettier.*",
+    "tsconfig.*",
+    "vite.*"
+  ]
+}

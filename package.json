@@ -1,0 +1,77 @@
+{
+  "name": "tasks_integration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "node src/main.ts",
+    "test": "vitest --watch",
+    "test-report": "vitest --watch --reporter=dot --reporter=json --outputFile=.vitest-result.json",
+    "dev:server": "ts-node-dev -r tsconfig-paths/register --trace-deprecation --trace-warnings --inspect --ignore-watch node_modules src/main.ts",
+    "build": "rimraf dist/* && tsc -p tsconfig.build.json && tscpaths -p tsconfig.build.json -s . -o ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericambiel/tasks_integration.git"
+  },
+  "keywords": [
+    "googlesheet",
+    "fluig",
+    "worksheet"
+  ],
+  "author": "Eric Ambiel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericambiel/tasks_integration/issues"
+  },
+  "homepage": "https://github.com/ericambiel/tasks_integration#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "celebrate": "^15.0.1",
+    "class-transformer": "^0.5.1",
+    "cors": "^2.8.5",
+    "cron": "^2.4.0",
+    "date-fns": "^2.30.0",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.18.2",
+    "express-mung": "^0.5.1",
+    "google-auth-library": "^9.0.0",
+    "googleapis": "^123.0.0",
+    "lodash": "^4.17.21",
+    "lodash.clonedeep": "^4.5.0",
+    "moment": "^2.29.4",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/cron": "^2.0.1",
+    "@types/dotenv-safe": "^8.1.2",
+    "@types/express": "^4.17.17",
+    "@types/express-mung": "^0.5.2",
+    "@types/lodash": "^4.14.196",
+    "@types/lodash.clonedeep": "^4.5.7",
+    "@types/luxon": "^3.3.1",
+    "@types/node": "^20.4.5",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "axios-debug-log": "^1.0.0",
+    "eslint": "^8.46.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.1",
+    "supertest": "^6.3.3",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "tscpaths": "^0.0.9",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.7",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.33.0"
+  }
+}
